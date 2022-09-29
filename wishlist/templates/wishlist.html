@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'wishlist:show_wishlist' %}">
             <img src="https://cdn.discordapp.com/attachments/942044537784791090/1024890354345979964/unknown.png" width="30" height="30" alt="Logout">
@@ -22,10 +22,17 @@
           </ul>
     </div>
 </nav>
+<br>
 
-<h5>Name: </h5>
-<p>{{user}}</p>
-<table>
+<div class="container text-center">
+<h5>Welcome back, {{user}}!</h5>
+<div class="me-auto mb-2 mb-lg-0">
+    <p>Your last login: {{ last_login }}</p>
+    </div>
+</div>
+
+
+<table class="table table-striped table-bordered table-hover">
     <tr>
     <th>Item Name</th>
     <th>Item Price</th>
@@ -42,7 +49,7 @@
 </table>
 <br>
 
-<h5>Last Login: {{ last_login }}</h5>
+
 
 
 {% endblock content %}
