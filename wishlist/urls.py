@@ -7,6 +7,7 @@ from wishlist.views import show_data_json_id
 from wishlist.views import register
 from wishlist.views import login_user
 from wishlist.views import logout_user
+from wishlist.views import how_wishlist_ajax
 
 app_name = 'wishlist'
 

@@ -26,12 +26,12 @@ def show_wishlist(request):
 
 def show_ajax(request):
     # data_wishlist_item = ItemWishlist.objects.all()
-    # context = {
+    context = {
     #     'list_item': data_wishlist_item,
-    #     'name': 'Syafiqo Arashy Octaviano',
+         'name': 'Syafiqo Arashy Octaviano',
     #     'last_login': request.COOKIES['last_login'],
     #     'user' : request.user,
-    # }   
+    }   
     return render(request, "wishlist_ajax.html")
 
 def show_data_xml(request):
@@ -83,3 +83,4 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('wishlist:login'))
     response.delete_cookie('last_login')
     return response
+
